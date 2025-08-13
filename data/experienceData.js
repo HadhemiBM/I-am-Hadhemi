@@ -11,26 +11,24 @@ const experienceData = [
       'Built and integrated REST APIs and admin panels, handling both front-end and back-end logic.',
     text3:
       'Redesigned and modernized legacy dashboards using Flutter, enhancing UI/UX and performance on mobile platforms.',
-    text4:'Took charge of projects from UI/UX prototyping in Figma to deployment in production',
-  text5:'Collaborated closely with teams to deliver tailor-made digital solutions aligned with business needs.',
-  text6:'Supervised and supported an intern throughout his project, providing technical guidance, code reviews, and regular feedback to ensure successful project delivery.',
-  text7:'Maintained GitHub repositories, wrote clean code, and followed agile workflows to ensure rapid delivery and continuous improvement.',
-    },
+    text4: 'Took charge of projects from UI/UX prototyping in Figma to deployment in production',
+    text5:
+      'Collaborated closely with teams to deliver tailor-made digital solutions aligned with business needs.',
+    text6:
+      'Supervised and supported interns throughout their projects, providing technical guidance, code reviews, and regular feedback to ensure successful project delivery.',
+    text7:
+      'Maintained GitHub repositories, wrote clean code, and followed agile workflows to ensure rapid delivery and continuous improvement.',
+  },
   {
-    title: 'Software Engineer Analytics',
-    company: 'HOPS Healthcare',
+    title: 'Front-End Developer (Freelance) ',
+    company: 'Deville Signature',
     location: 'Ahmedabad, India',
-    range: 'March 2021 - June 2021',
-    url: 'https://hops.healthcare/',
+    range: 'July 2024',
+    url: 'https://hadhemibm.github.io/DvilleSignature_Prop/',
     text1:
-      'Guided by Mr. Vivek Patel, to create a pipeline that extracts essential information from informal conversations.',
-    text2:
-      'Worked on creating a web app for their healthcare system for doctors to analyze and save reports.',
-    text3:
-      'Developed functions for automatically extracting important elements from reports using BioBERT and Regex.',
-
- 
-    },
+      'Developed a static real estate showcase website, allowing users to browse available properties with a clean and modern layout.',
+    text2: 'Focused on UI structure and visual presentation to meet client expectations.',
+  },
 ]
 
 export default experienceData

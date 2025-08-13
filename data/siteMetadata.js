@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Blog | Hadhemi Ben Mansour',
   author: 'Hadhemi Ben Mansour',
   headerTitle: 'Mere Musings',
-  description: 'My personal blog where I share my musings',
+  description: 'my personal space, where I showcase my work, share ideas',
   snippets: 'Reuseable code snippets collected by Parth',
   language: 'en-us',
   theme: 'system', // system, dark or light

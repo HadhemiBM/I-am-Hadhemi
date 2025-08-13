@@ -209,13 +209,13 @@ export default function AuthorLayout({ children, frontMatter }) {
               you can see what I use on daily basis
             </p>
             <br />
-            <h1>About this site</h1>
+            {/* <h1>About this site</h1>
             <p>
               Welcome to my personal space on the web, a place where I showcase my work, share
               ideas, and write about things that inspire me.
             </p>
-            <p>
-              I learnt how to build this site from the most awesome people in the community:
+            <p> */}
+            {/* I learnt how to build this site from the most awesome people in the community:
               <ul>
                 <li>
                   <Link
@@ -262,7 +262,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                   : Now page, navigation style, animations and much more.
                 </li>
               </ul>
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="mt-10 md:pl-16">
@@ -283,14 +283,13 @@ export default function AuthorLayout({ children, frontMatter }) {
                 text1={d.text1}
                 text2={d.text2}
                 text3={d.text3}
-                text4={d.text4} 
-                text5={d.text5} 
-                text6={d.text6} 
-                text7={d.text7} 
+                text4={d.text4}
+                text5={d.text5}
+                text6={d.text6}
+                text7={d.text7}
               />
             ))}
           </div>
-
         </div>
       </div>
     </>

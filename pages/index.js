@@ -25,11 +25,13 @@ export default function Home({ posts }) {
           <div className="pt-6">
             <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Hi, I am {''}
-              <span className="text-primary-color-500 dark:text-primary-color-dark-500">Hadhemi</span>
+              <span className="text-primary-color-500 dark:text-primary-color-dark-500">
+                Hadhemi
+              </span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              {`Welcome to ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
-              side projects and learning new technologies.
+              {`Welcome to ${siteMetadata.description}. I am a passionate Full Stack Developer who creates innovative solutions.I enjoy building `}
+              meaningful applications and learning cutting-edge technologies.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
               This is my place for
@@ -64,6 +66,11 @@ export default function Home({ posts }) {
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
                   ⌘
+                </span>{' '}
+                <span className="text-sm">/ </span>
+
+                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
+                  ctrl
                 </span>{' '}
                 <span className="text-sm">+ </span>
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
@@ -197,11 +204,11 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
-        <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+        {/* <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
           Latest
         </h2>
-        <hr className="border-gray-200 dark:border-gray-700" />
-        <ul>
+        <hr className="border-gray-200 dark:border-gray-700" /> */}
+        {/* <ul>
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
@@ -251,9 +258,9 @@ export default function Home({ posts }) {
               </Link>
             )
           })}
-        </ul>
+        </ul> */}
       </div>
-      {posts.length > MAX_DISPLAY && (
+      {/* {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end pt-5 text-lg font-normal leading-6">
           <Link
             href="/blog"
@@ -263,10 +270,35 @@ export default function Home({ posts }) {
             All Posts &rarr;
           </Link>
         </div>
-      )}
+      )} */}
       {siteMetadata.newsletter.provider !== '' && (
         <div className="flex items-center justify-center pt-4">{/* <NewsletterForm /> */}</div>
       )}
     </>
   )
 }
+// import Particles from '@/components/Particles'
+// import Link from 'next/link'
+// import React from 'react'
+
+// const navigation = [
+//   { name: 'Projects', href: '/projects' },
+//   { name: 'Contact', href: '/contact' },
+// ]
+
+// export default function Home() {
+//   return (
+//     // <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+//     <>
+//       <div className="animate-glow hidden h-px w-screen animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block" />
+
+//       {/* <Particles className="animate-fade-in absolute inset-0 -z-10" quantity={100} /> */}
+
+//       <h1 className="text-edge-outline font-display z-10 animate-title cursor-default whitespace-nowrap bg-white bg-clip-text px-0.5 py-3.5 text-4xl text-transparent duration-1000 sm:text-6xl md:text-9xl ">
+//         Hadhemi Ben Mansour
+//       </h1>
+
+//       <div className="animate-glow hidden h-px w-screen animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block" />
+//     </>
+//   )
+// }
