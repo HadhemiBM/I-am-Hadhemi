@@ -95,7 +95,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               </RoughNotation>
             </p>
             {/* <br /> */}
-            <p>
+            {/* <p>
               This is what I am doing right{' '}
               <Link
                 href={'/now'}
@@ -103,7 +103,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               >
                 now
               </Link>
-            </p>
+            </p> */}
             {/* <br /> */}
             {/* <p className="sm:block md:hidden lg:hidden">
               I am always open to collaboration and new challenges! I enjoy sharing knowledge and
@@ -199,7 +199,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               </Link>
             </p>
             {/* <br /> */}
-            <p>
+            {/* <p>
               <Link
                 href={'/uses'}
                 className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
@@ -207,8 +207,8 @@ export default function AuthorLayout({ children, frontMatter }) {
                 Here
               </Link>{' '}
               you can see what I use on daily basis
-            </p>
-            <br />
+            </p> */}
+            {/* <br /> */}
             {/* <h1>About this site</h1>
             <p>
               Welcome to my personal space on the web, a place where I showcase my work, share

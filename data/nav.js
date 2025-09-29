@@ -4,7 +4,7 @@ export const navigation = {
     { name: 'About', href: '/about' },
 
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
+    // { name: 'Blog', href: '/blog' },
     { name: 'Tags', href: '/tags' },
     { name: 'Snippets', href: '/snippets' },
     { name: 'Contact', href: '/contact' },
