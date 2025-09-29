@@ -63,7 +63,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
-            <div className="flex flex-col pt-3">
+            {/* <div className="flex flex-col pt-3">
               <a
                 className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
                 href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Parth"
@@ -73,7 +73,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               >
                 Say Hi!
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="prose max-w-none pb-8 pt-8 dark:prose-dark xl:col-span-2">
             <p>

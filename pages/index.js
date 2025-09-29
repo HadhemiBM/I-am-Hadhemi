@@ -30,7 +30,8 @@ export default function Home({ posts }) {
               </span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              {`Welcome to ${siteMetadata.description}. I am a passionate Full Stack Developer who creates innovative solutions.I enjoy building `}
+              {`Welcome to ${siteMetadata.description}. 
+               I am a passionate Full Stack Developer who creates innovative solutions.I enjoy building `}
               meaningful applications and learning cutting-edge technologies.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
@@ -68,8 +69,7 @@ export default function Home({ posts }) {
                   ⌘
                 </span>{' '}
                 <span className="text-sm">/ </span>
-
-                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
+                <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
                   ctrl
                 </span>{' '}
                 <span className="text-sm">+ </span>

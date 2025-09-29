@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'Blog | Hadhemi Ben Mansour',
+  title: 'Hadhemi Ben Mansour',
   author: 'Hadhemi Ben Mansour',
   headerTitle: 'Mere Musings',
   description: 'my personal space, where I showcase my work, share ideas',
@@ -46,9 +46,7 @@ const siteMetadata = {
       themeURL: '',
     },
   },
-  socialAccount: {
-    
-  },
+  socialAccount: {},
 }
 
 module.exports = siteMetadata
