@@ -7,6 +7,7 @@ import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
+import useSound from 'use-sound'
 
 const MAX_DISPLAY = 3
 
@@ -17,6 +18,9 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
+  const [ThemeSoundResume] = useSound('/static/sounds/loading.mp3')
+  const [ThemeSoundbuild] = useSound('/static/sounds/turn_page.wav')
+
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
@@ -110,7 +114,12 @@ export default function Home({ posts }) {
           </div> */}
           <div className="flex items-center justify-center">
             <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
-              <div className="my-2 grid items-start gap-8">
+              <div
+                className="my-2 grid items-start gap-8"
+                onClick={() => {
+                  ThemeSoundbuild()
+                }}
+              >
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
                   <Link href="/projects">
@@ -139,10 +148,15 @@ export default function Home({ posts }) {
                   </Link>
                 </div>
               </div>
-              <div className="my-2 grid items-start gap-8">
+              <div
+                className="my-2 grid items-start gap-8"
+                onClick={() => {
+                  ThemeSoundbuild()
+                }}
+              >
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-fuchsia-600 to-emerald-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="https://parthdesai.vercel.app/">
+                  <Link href="/about">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
@@ -168,10 +182,20 @@ export default function Home({ posts }) {
                   </Link>
                 </div>
               </div>
-              <div className="my-2 grid items-start gap-8">
+              <div
+                className="my-2 grid items-start gap-8"
+                onClick={() => {
+                  ThemeSoundResume()
+                }}
+              >
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="https://parthdesai.vercel.app/resume.pdf">
+                  {/* <Link href="https://parthdesai.vercel.app/resume.pdf"> */}
+                  <Link
+                    href="/static/pdf/Hadhemi-Ben-Mansour.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
