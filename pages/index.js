@@ -80,7 +80,7 @@ export default function Home({ posts }) {
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
                   K
                 </span>{' '}
-                <span className="text-sm">to start</span>
+                <span className="text-sm">to contact</span>
               </div>
             </p>
           </div>

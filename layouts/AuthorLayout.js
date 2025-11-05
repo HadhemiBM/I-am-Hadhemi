@@ -287,6 +287,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 text5={d.text5}
                 text6={d.text6}
                 text7={d.text7}
+                text8={d.text8}
               />
             ))}
           </div>

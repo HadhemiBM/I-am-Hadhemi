@@ -1,5 +1,6 @@
 import SocialIcon from './social-icons'
 import FolderIcon from './icon'
+import Image from './Image'
 
 const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 }) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
@@ -18,6 +19,24 @@ const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 })
             </div>
           </div>
         </div>
+        {/* render image when available */}
+        {imgSrc ? (
+          <div className="mb-4">
+            {imgSrc.startsWith('/') ? (
+              <Image
+                src={imgSrc}
+                alt={title}
+                width={544}
+                height={300}
+                className="rounded-md object-cover"
+              />
+            ) : (
+              // external images: use regular img tag to avoid Next.js remote config issues
+              <img src={imgSrc} alt={title} className="w-full rounded-md object-cover" />
+            )}
+          </div>
+        ) : null}
+
         <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">{title}</h2>
 
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
