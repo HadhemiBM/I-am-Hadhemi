@@ -3,8 +3,6 @@ import { useState, useEffect, Fragment } from 'react'
 import { HiSearch } from 'react-icons/hi'
 import { useRouter } from 'next/router'
 import { FiCommand } from 'react-icons/fi'
-import { motion } from 'framer-motion'
-import useSound from 'use-sound'
 
 export default function CommandPalette({ navigation }) {
   const router = useRouter()
@@ -14,6 +12,7 @@ export default function CommandPalette({ navigation }) {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        event.preventDefault()
         setIsOpen(!isOpen)
       }
     }
@@ -22,32 +21,19 @@ export default function CommandPalette({ navigation }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [isOpen])
 
-  const toggleIcon = () => {
-    setIsOpen(!isOpen)
-  }
-
-  const [ThemeSound] = useSound('/static/sounds/open.mp3')
-
   const filterednavigation = query
     ? navigation.pages.filter((page) => page.name.toLowerCase().includes(query.toLocaleLowerCase()))
     : navigation.pages
   return (
     <>
-      <motion.button
-        className="ml-2 mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-zinc-300 p-1 ring-zinc-400 transition-all duration-200 ease-in-out hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800"
+      <button
+        className="ml-2 mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-zinc-300 p-1 ring-zinc-400 transition-all hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800"
         type="button"
         aria-label="Command palette"
-        animate={{
-          rotate: isOpen ? 360 : 0,
-        }}
-        transition={{ duration: 0.1, ease: 'easeIn' }}
-        onClick={() => {
-          toggleIcon()
-          ThemeSound()
-        }}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <FiCommand />
-      </motion.button>
+      </button>
       <Transition.Root show={isOpen} as={Fragment} afterLeave={() => setQuery('')}>
         <Dialog onClose={setIsOpen} className="fixed inset-0 z-20 overflow-y-auto p-12 pt-[20vh]">
           <Transition.Child
@@ -123,7 +109,7 @@ export default function CommandPalette({ navigation }) {
                 </Combobox.Options>
               )}
               {query && filterednavigation.length === 0 && (
-                <p className="py-4 px-12 text-sm text-gray-500 ">no results found</p>
+                <p className="px-12 py-4 text-sm text-gray-500 ">no results found</p>
               )}
             </Combobox>
           </Transition.Child>

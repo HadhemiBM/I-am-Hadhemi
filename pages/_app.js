@@ -2,8 +2,6 @@ import '@/css/tailwind.css'
 import '@/css/extra.css'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
-import Router from 'next/router'
-import NProgress from 'nprogress'
 import siteMetadata from '@/data/siteMetadata'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
@@ -11,20 +9,6 @@ import ScrollTop from '@/components/ScrollTop'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
-
-NProgress.configure({ showSpinner: false })
-
-Router.onRouteChangeStart = () => {
-  NProgress.start()
-}
-
-Router.onRouteChangeComplete = () => {
-  NProgress.done()
-}
-
-Router.onRouteChangeError = () => {
-  NProgress.done()
-}
 
 export default function App({ Component, pageProps }) {
   return (
