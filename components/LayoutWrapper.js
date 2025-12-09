@@ -3,8 +3,6 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
-import { navigation } from '@/data/nav'
-import CommandPalette from './CommandPalette'
 import ThemeSwitch from './ThemeSwitch'
 import { useRouter } from 'next/router'
 import DropMenu from './DropMenu.js'
@@ -24,7 +22,7 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
+            <div className="flex items-center text-base leading-5">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
@@ -35,7 +33,6 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <CommandPalette navigation={navigation} />
             <ThemeSwitch />
             <DropMenu />
             {/* <MobileNav /> */}
