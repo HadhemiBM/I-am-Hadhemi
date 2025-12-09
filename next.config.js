@@ -71,12 +71,7 @@ module.exports = withBundleAnalyzer({
       'res.cloudinary.com', // Twitter Profile Picture
     ],
   },
-  rewrites: async () => [
-    {
-      source: '/public/terms.html',
-      destination: '/pages/api/html.js',
-    },
-  ],
+
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
