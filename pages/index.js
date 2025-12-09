@@ -4,8 +4,9 @@ import { RoughNotation } from 'react-rough-notation'
 import useSound from 'use-sound'
 
 export default function Home() {
-  const [ThemeSoundResume] = useSound('/static/sounds/loading.mp3')
-  const [ThemeSoundbuild] = useSound('/static/sounds/turn_page.wav')
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  const [ThemeSoundResume] = useSound(`${basePath}/static/sounds/loading.mp3`)
+  const [ThemeSoundbuild] = useSound(`${basePath}/static/sounds/turn_page.wav`)
 
   return (
     <>

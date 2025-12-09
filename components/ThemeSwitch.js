@@ -9,7 +9,8 @@ const ThemeSwitch = () => {
 
   useEffect(() => setMounted(true), [])
 
-  const [ThemeSound] = useSound('/static/sounds/switch-on.mp3')
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  const [ThemeSound] = useSound(`${basePath}/static/sounds/switch-on.mp3`)
 
   const handleThemeSwitch = () => {
     setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')

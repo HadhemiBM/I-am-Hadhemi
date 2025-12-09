@@ -12,7 +12,8 @@ export default function DropMenu() {
     setIsOpen(!isOpen)
   }
 
-  const [ThemeSound] = useSound('/static/sounds/page-change.mp3')
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  const [ThemeSound] = useSound(`${basePath}/static/sounds/page-change.mp3`)
 
   return (
     <Menu as="div" className="relative z-10 inline-block text-left ">
