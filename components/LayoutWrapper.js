@@ -4,12 +4,9 @@ import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import ThemeSwitch from './ThemeSwitch'
-import { useRouter } from 'next/router'
 import DropMenu from './DropMenu.js'
 
 const LayoutWrapper = ({ children }) => {
-  const router = useRouter()
-
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
@@ -17,7 +14,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
-                {`~${router.asPath}`}
+                ~/
               </div>
             </Link>
           </div>

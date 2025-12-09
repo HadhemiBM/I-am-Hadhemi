@@ -1,11 +1,10 @@
 import { Dialog, Combobox, Transition } from '@headlessui/react'
 import { useState, useEffect, Fragment } from 'react'
 import { HiSearch } from 'react-icons/hi'
-import { useRouter } from 'next/router'
 import { FiCommand } from 'react-icons/fi'
+import Link from './Link'
 
 export default function CommandPalette({ navigation }) {
-  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [query, setQuery] = useState('')
 
@@ -56,9 +55,8 @@ export default function CommandPalette({ navigation }) {
           >
             <Combobox
               value=""
-              onChange={(page) => {
+              onChange={() => {
                 setIsOpen(false)
-                router.push(`${page.href}`)
               }}
               as="div"
               className="relative mx-auto max-h-[50vh] max-w-xl divide-y divide-gray-300 overflow-hidden overflow-y-scroll rounded-xl bg-zinc-200 shadow-2xl ring-1 ring-black/5 dark:divide-zinc-700 dark:bg-zinc-800"
