@@ -22,20 +22,17 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="flex items-center text-base leading-5">
-              {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="link-underline rounded px-2 py-1 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:px-3 sm:py-2"
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </div>
+            {headerNavLinks.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+                className="link-underline rounded px-2 py-1 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:px-3 sm:py-2"
+              >
+                {link.title}
+              </Link>
+            ))}
             <ThemeSwitch />
             <DropMenu />
-            {/* <MobileNav /> */}
           </div>
         </header>
         <main className="mb-auto">{children}</main>
