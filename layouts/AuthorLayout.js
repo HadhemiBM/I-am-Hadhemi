@@ -32,6 +32,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               width="192px"
               height="192px"
               className="h-48 w-48 rounded-full xl:rounded-full"
+              loading="lazy"
               placeholder="blur"
               blurDataURL="/static/images/SVG-placeholder.png"
             />

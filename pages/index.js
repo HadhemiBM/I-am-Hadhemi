@@ -1,20 +1,9 @@
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-
 import { RoughNotation } from 'react-rough-notation'
-
 import useSound from 'use-sound'
 
-const MAX_DISPLAY = 3
-
-export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-
-  return { props: { posts } }
-}
-
-export default function Home({ posts }) {
+export default function Home() {
   const [ThemeSoundResume] = useSound('/static/sounds/loading.mp3')
   const [ThemeSoundbuild] = useSound('/static/sounds/turn_page.wav')
 

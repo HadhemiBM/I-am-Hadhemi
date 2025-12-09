@@ -6,11 +6,8 @@ import Footer from './Footer'
 import { navigation } from '@/data/nav'
 import CommandPalette from './CommandPalette'
 import ThemeSwitch from './ThemeSwitch'
-import Typewriter from 'typewriter-effect'
 import { useRouter } from 'next/router'
 import DropMenu from './DropMenu.js'
-// import Logo from '@/data/logo.svg'
-// import MobileNav from './MobileNav'
 
 const LayoutWrapper = ({ children }) => {
   const router = useRouter()
@@ -22,14 +19,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
-                {`~${router.asPath}`}{' '}
-                <Typewriter
-                  options={{
-                    strings: [],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
+                {`~${router.asPath}`}
               </div>
             </Link>
           </div>

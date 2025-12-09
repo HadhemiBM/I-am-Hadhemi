@@ -28,11 +28,17 @@ const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 })
                 alt={title}
                 width={544}
                 height={300}
+                loading="lazy"
                 className="rounded-md object-cover"
               />
             ) : (
               // external images: use regular img tag to avoid Next.js remote config issues
-              <img src={imgSrc} alt={title} className="w-full rounded-md object-cover" />
+              <img
+                src={imgSrc}
+                alt={title}
+                loading="lazy"
+                className="w-full rounded-md object-cover"
+              />
             )}
           </div>
         ) : null}
