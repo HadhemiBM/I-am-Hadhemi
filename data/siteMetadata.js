@@ -8,10 +8,10 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://musing.vercel.app',
   siteRepo: 'https://github.com/pycoder2000/blog',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/static/images/logo.png`,
   // image: '/static/images/avatar.png',
-  image: '/static/images/photosprofils.jpg',
-  socialBanner: '/static/images/twitter-card.png',
+  image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/static/images/photosprofils.jpg`,
+  socialBanner: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/static/images/twitter-card.png`,
   email: 'desaiparth2000@gmail.com',
   github: 'https://github.com/pycoder2000',
 
