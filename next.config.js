@@ -1,34 +1,20 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
-
-module.exports = withBundleAnalyzer({
+/** Minimal Next.js config for static export (GitHub Pages). */
+module.exports = {
   reactStrictMode: true,
-  output: 'export', // required for GitHub Pages static export
+  output: 'export',
   images: {
-    unoptimized: true, // static export cannot optimize images
+    unoptimized: true,
   },
   pageExtensions: ['js', 'jsx'],
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
     ignoreDuringBuilds: true,
   },
-  webpack: (config, { dev, isServer }) => {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
-
-    if (!dev && !isServer) {
-      // Replace React with Preact only in client production build
-      Object.assign(config.resolve.alias, {
-        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
-      })
-    }
-
     return config
   },
-})
+}
