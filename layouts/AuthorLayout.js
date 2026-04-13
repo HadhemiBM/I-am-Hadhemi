@@ -53,10 +53,10 @@ export default function AuthorLayout({ children, frontMatter }) {
               >
                 {text1} Currently, I work at{' '}
                 <Link
-                  href={'https://www.4inatechnologie.com'}
+                  href={'https://www.clozinn.com'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  4ina Technology
+                  CLOZINN Support
                 </Link>
               </RoughNotation>
             </p>

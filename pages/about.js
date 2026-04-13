@@ -5,7 +5,7 @@ export default function About() {
     name: 'Hadhemi Ben Mansour',
     avatar: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/static/images/photosprofils.jpg`,
     occupation: 'Full Stack Web & Mobile Developer',
-    company: '4ina Technology',
+    company: 'CLOZINN Support',
     email: 'ben.manssour.hadhemi@gmail.com',
     linkedin: 'www.linkedin.com/in/hadhemi-ben-mansour-0241701a5',
     github: 'https://github.com/HadhemiBM',

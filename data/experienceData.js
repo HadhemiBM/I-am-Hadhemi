@@ -1,4 +1,25 @@
 const experienceData = [
+   {
+    title: 'Front-End Engineer (Mobile & Web)',
+    company: 'CLOZINN Support',
+    location: 'Lac3, Tunisia / Hybrid',
+    range: 'November 2025 - Present',
+    url: 'https://www.clozinn.com',
+    text1:
+      'Led the end-to-end front-end development of the LegalTech mobile application “Actoob”, from UI/UX design and high-fidelity prototyping (Figma) to production-ready implementation using React Native (Expo), including integration of RESTful APIs, OCR services, and multilingual support to enhance accessibility for a diverse user base.',
+    text2:
+      'Engineered and launched the Actoob marketing website using Next.js and Tailwind CSS, delivering a fully responsive, multilingual, high-performance, and SEO-optimized experience across all devices.',
+    text3:
+      'Delivered the "AccesSIV" landing page for a France-based project using Next.js, ensuring pixel-perfect implementation from Figma designs, a fully responsive layout, and strong SEO foundations.',
+    text4: 'Deployed and managed applications using Vercel and OVH, optimizing load time, performance, and scalability.',
+    text5:
+      'Collaborated cross-functionally with design and marketing teams to align product vision, enhance SEO strategy, and improve user acquisition.',
+    text6:
+      'Took ownership of front-end architecture, code quality, and performance optimization across multiple projects.',
+   
+    text7:
+      'Tools: React Native (Expo), Next.js, Tailwind CSS, Figma, Vercel, OVH, REST APIs, OCR APIs, GitHub',
+  },
   {
     title: 'Full Stack Web & Mobile Developer',
     company: '4InA Technologie',
@@ -6,20 +27,19 @@ const experienceData = [
     range: 'October 2024 - October 2025',
     url: 'https://www.4inatechnologie.com',
     text1:
-      'Led the development of the company’s main website using Next.js and NestJS, ensuring responsive design and seamless navigation.',
+      'Led the development and delivery of the company’s website, ensuring scalability, performance, and a fully responsive user experience.',
     text2:
-      'Built and integrated REST APIs and admin panels, handling both front-end and back-end logic.',
+      'Redesigned and modernized legacy dashboards using Flutter, enhancing UI/UX quality and mobile performance.',
     text3:
-      'Redesigned and modernized legacy dashboards using Flutter, enhancing UI/UX and performance on mobile platforms.',
-    text4: 'Took charge of projects from UI/UX prototyping in Figma to deployment in production',
+      'Took full ownership of projects from UI/UX design (Figma) to production deployment, delivering end-to-end digital solutions.',
+    text4: 'Collaborated closely with cross-functional teams to translate business needs into efficient and user-centric technical solutions.',
     text5:
-      'Collaborated closely with teams to deliver tailor-made digital solutions aligned with business needs.',
+      'Mentored and supervised interns, providing code reviews, technical guidance, and continuous feedback to ensure successful delivery.',
     text6:
-      'Supervised and supported interns throughout their projects, providing technical guidance, code reviews, and regular feedback to ensure successful project delivery.',
+      'Implemented best practices in version control, code quality, and agile methodologies to accelerate development cycles.',
     text7:
-      'Maintained GitHub repositories, wrote clean code, and followed agile workflows to ensure rapid delivery and continuous improvement.',
-    text8:
-      'Tools :Next.js, CSS Modules, Node.js, NestJs, Flutter,Flask, GitHub, Figma, CPanel , Oxahost ,Tailwind CSS, Vercel',
+      'Tools :Next.js, Node.js, NestJS, Flutter, Flask, Tailwind CSS, CSS Modules, GitHub, Figma, cPanel, OVH, Vercel',
+
   },
   {
     title: 'Trainer Python : PCAP Certification',

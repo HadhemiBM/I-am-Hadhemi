@@ -3,7 +3,7 @@ name: Hadhemi Ben Mansour
 avatar: /static/images/photosprofils.jpg
 # avatar: /static/images/avatar.png
 occupation: Full Stack Web & Mobile Developer
-company: 4ina Technology
+company: CLOZINN Support
 email: ben.manssour.hadhemi@gmail.com
 
 linkedin: www.linkedin.com/in/hadhemi-ben-mansour-0241701a5
