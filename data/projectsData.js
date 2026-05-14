@@ -31,7 +31,7 @@ const projectsData = [
 
     imgSrc: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1776725063/Opera_Snapshot_2026-04-20_234243_play.google.com_iqwalm.png',
     href: 'https://play.google.com/store/apps/details?id=com.hadhemibm.actoob&pcampaignid=web_share',
-    github: 'https://res.cloudinary.com/ddngbriyu/video/upload/v1769767124/WhatsApp_Video_2026-01-28_at_17.59.41_wlcjnb.mp4',
+    github: '',
     tech1: 'Figma',
     tech2: 'React Native (Expo)',
     tech3: 'REST APIs',
