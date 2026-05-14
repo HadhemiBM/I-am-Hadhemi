@@ -232,7 +232,7 @@ function ProjectCard({ project, index, onCardClick }) {
           ))}
         </div>
       </div>    
-      {/* </div>     */}
+
 
 
 
