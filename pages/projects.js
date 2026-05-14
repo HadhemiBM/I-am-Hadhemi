@@ -231,7 +231,12 @@ function ProjectCard({ project, index, onCardClick }) {
             </span>
           ))}
         </div>
-      </div>
+      </div>    
+      {/* </div>     */}
+
+
+
+
 
       {/* Show thumbnail at full opacity on hover, hide text */}
       {project.imgSrc && (
