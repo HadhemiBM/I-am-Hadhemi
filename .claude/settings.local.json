@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Asus Tuf\\\\Hadhemi\\\\IM_Hadhemi\\\\I-am-Hadhemi\" -Force)",
+      "Bash(Select-Object Name, Mode)"
+    ]
+  }
+}

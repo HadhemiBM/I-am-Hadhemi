@@ -39,7 +39,7 @@ export default function Home() {
               </RoughNotation>
               in between. Have a good read!
             </p>
-            <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
+            <div className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               This is my place for{' '}
               <RoughNotation
                 animate="true"
@@ -68,7 +68,7 @@ export default function Home() {
                 </span>{' '}
                 <span className="text-sm">to contact</span>
               </div>
-            </p>
+            </div>
           </div>
 
           <div className="flex items-center justify-center">
@@ -135,7 +135,7 @@ export default function Home() {
                         <span className="pr-6 text-gray-900 dark:text-gray-100">Read my story</span>
                       </span>
                       <span className="pl-6 text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                        Website&nbsp;&rarr;
+                        About&nbsp;&rarr;
                       </span>
                     </span>
                   </Link>

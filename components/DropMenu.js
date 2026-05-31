@@ -18,18 +18,11 @@ export default function DropMenu() {
   return (
     <Menu as="div" className="relative z-10 inline-block text-left ">
       <div>
-        <Menu.Button className=" ml-2 cursor-pointer rounded-full bg-zinc-300 ring-zinc-400 transition-all hover:bg-violet-400 hover:ring-1 dark:bg-zinc-700 dark:ring-violet-700 dark:hover:bg-violet-600">
-          <button
-            className="flex h-8 w-8 items-center justify-center p-2 transition-transform duration-200 hover:scale-110 active:scale-75"
-            aria-label="Toggle List Menu"
-            type="button"
-          >
-            {isOpen ? (
-              <HamburgerMenuIcon className="h-4 w-4" />
-            ) : (
-              <HamburgerMenuIcon className="h-4 w-4" />
-            )}
-          </button>
+        <Menu.Button
+          className="ml-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-zinc-300 p-2 ring-zinc-400 transition-all hover:bg-violet-400 hover:ring-1 active:scale-75 dark:bg-zinc-700 dark:ring-violet-700 dark:hover:bg-violet-600"
+          aria-label="Toggle List Menu"
+        >
+          <HamburgerMenuIcon className="h-4 w-4" />
         </Menu.Button>
       </div>
 
@@ -55,19 +48,18 @@ export default function DropMenu() {
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
-                <Link href="/contact">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <Link2Icon className="mr-4 mt-0.5" /> Contact
-                    </div>
-                  </a>
+                <Link
+                  href="/contact"
+                  className={classNames(
+                    active
+                      ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
+                      : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  <div className="flex flex-row">
+                    <Link2Icon className="mr-4 mt-0.5" /> Contact
+                  </div>
                 </Link>
               )}
             </Menu.Item>
