@@ -1,5 +1,6 @@
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
+import experienceData from '@/data/experienceData'
 import { RoughNotation } from 'react-rough-notation'
 import useSound from 'use-sound'
 
@@ -25,7 +26,7 @@ export default function Home() {
               meaningful applications and learning cutting-edge technologies.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
-              This is my place for
+              This is my place for{'  '}
               <RoughNotation
                 animate="true"
                 type="box"
@@ -35,7 +36,7 @@ export default function Home() {
                 animationDuration={2500}
                 className="text-slate-200"
               >
-                thoughts, reflections & everything&nbsp;
+                thoughts, reflections & everything&nbsp;{'  '}
               </RoughNotation>
               in between. Have a good read!
             </p>
@@ -186,6 +187,58 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Horizontal Experience Timeline */}
+      <div className="mt-4  pt-10 dark:border-gray-700">
+        <h2 className="mb-10 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
+          Experience
+        </h2>
+
+        <div className="relative">
+          {/* desktop: horizontal line */}
+          <div className="absolute left-0 top-[11px] hidden h-0.5 w-full bg-gray-200 dark:bg-gray-700 md:block" />
+
+          {/* mobile: vertical line */}
+          <div className="absolute left-[11px] top-0 h-full w-0.5 bg-gray-200 dark:bg-gray-700 md:hidden" />
+
+          <div className="flex flex-col gap-8 md:flex-row md:justify-between">
+            {experienceData.slice().reverse().map((exp, index) => (
+              <div key={index} className="relative flex flex-col pl-8 md:items-center md:pl-0 md:text-center">
+                {/* desktop dot */}
+                <span className="mb-4 hidden h-6 w-6 shrink-0 rounded-full bg-white ring-2 ring-pink-500 dark:bg-black dark:ring-pink-500 md:block" />
+
+                {/* mobile dot */}
+                <span className="absolute left-0 top-1 h-6 w-6 shrink-0 rounded-full bg-white ring-2 ring-pink-500 dark:bg-black dark:ring-pink-500 md:hidden" />
+
+                {/* date */}
+                <p className="font-mono text-xs text-gray-400 dark:text-gray-500">{exp.range}</p>
+
+                {/* title */}
+                <p className="mt-1 text-sm font-semibold text-gray-800 dark:text-gray-100">
+                  {exp.title}
+                </p>
+
+                {/* company */}
+                <Link
+                  href={exp.url}
+                  className="mt-0.5 text-sm text-pink-500 hover:text-pink-600 dark:text-pink-400"
+                >
+                  {exp.company}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 text-right">
+          <Link
+            href="/about"
+            className="text-sm font-medium text-pink-500 hover:text-pink-600 dark:text-pink-400"
+          >
+            See full experience &rarr;
+          </Link>
         </div>
       </div>
     </>
