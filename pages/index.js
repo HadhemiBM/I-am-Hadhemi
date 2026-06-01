@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic'
 import Link from '@/components/Link'
-import siteMetadata from '@/data/siteMetadata'
 import experienceData from '@/data/experienceData'
 import useSound from 'use-sound'
+import { useTranslation } from '@/context/LanguageContext'
 
 const RoughNotation = dynamic(
   () => import('react-rough-notation').then((m) => m.RoughNotation),
@@ -10,6 +10,7 @@ const RoughNotation = dynamic(
 )
 
 export default function Home() {
+  const { t } = useTranslation()
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
   const [ThemeSoundResume] = useSound(`${basePath}/static/sounds/loading.mp3`)
   const [ThemeSoundbuild] = useSound(`${basePath}/static/sounds/turn_page.wav`)
@@ -20,18 +21,16 @@ export default function Home() {
         <div className="mb-4 flex flex-col items-center gap-x-12 xl:flex-row">
           <div className="pt-2">
             <h1 className="pb-2 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Hi, I am {''}
+              {t('hero.greeting')}{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">
                 Hadhemi
               </span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              {`Welcome to ${siteMetadata.description}. 
-               I am a passionate Full Stack Developer who creates innovative solutions.I enjoy building `}
-              meaningful applications and learning cutting-edge technologies.
+              {t('hero.description')}
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
-              This is my place for{'  '}
+              {t('hero.tagline')}{' '}
               <RoughNotation
                 animate="true"
                 type="box"
@@ -41,12 +40,12 @@ export default function Home() {
                 animationDuration={2500}
                 className="text-slate-200"
               >
-                thoughts, reflections & everything&nbsp;{'  '}
-              </RoughNotation>
-              in between. Have a good read!
+                {t('hero.taglinePhrase')}&nbsp;
+              </RoughNotation>{' '}
+              {t('hero.taglineEnd')}
             </p>
             <div className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              This is my place for{' '}
+              {t('hero.tagline')}{' '}
               <RoughNotation
                 animate="true"
                 type="highlight"
@@ -56,9 +55,9 @@ export default function Home() {
                 animationDuration={2500}
                 className="text-slate-200"
               >
-                thoughts, reflections & everything&nbsp;
-              </RoughNotation>
-              in between. Have a good read!{' '}
+                {t('hero.taglinePhrase')}&nbsp;
+              </RoughNotation>{' '}
+              {t('hero.taglineEnd')}
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
@@ -72,7 +71,7 @@ export default function Home() {
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
                   K
                 </span>{' '}
-                <span className="text-sm">to contact</span>
+                <span className="text-sm">{t('hero.shortcut')}</span>
               </div>
             </div>
           </div>
@@ -104,7 +103,7 @@ export default function Home() {
                             d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
                           />
                         </svg>
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">What I built</span>
+                        <span className="pr-6 text-gray-900 dark:text-gray-100">{t('hero.buttons.projects')}</span>
                       </span>
                       <span className="pl-6 text-amber-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                         Projects&nbsp;&rarr;
@@ -138,7 +137,7 @@ export default function Home() {
                             d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                           />
                         </svg>
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">Read my story</span>
+                        <span className="pr-6 text-gray-900 dark:text-gray-100">{t('hero.buttons.about')}</span>
                       </span>
                       <span className="pl-6 text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                         About&nbsp;&rarr;
@@ -172,7 +171,7 @@ export default function Home() {
                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                           />
                         </svg>
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">Hire me!</span>
+                        <span className="pr-6 text-gray-900 dark:text-gray-100">{t('hero.buttons.hire')}</span>
                       </span>
                       <span className="pl-6 text-fuchsia-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                         Mail&nbsp;&rarr;
@@ -210,7 +209,7 @@ export default function Home() {
                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                           />
                         </svg>
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">Resume</span>
+                        <span className="pr-6 text-gray-900 dark:text-gray-100">{t('hero.buttons.resume')}</span>
                       </span>
                       <span className="pl-6 text-cyan-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                         PDF&nbsp;&rarr;
@@ -227,7 +226,7 @@ export default function Home() {
       {/* Horizontal Experience Timeline */}
       <div className="mt-4  pt-0 dark:border-gray-700">
         <h2 className="mb-10 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
-          Experience
+          {t('experience.title')}
         </h2>
 
         <div className="relative">
@@ -271,7 +270,7 @@ export default function Home() {
             href="/about"
             className="text-sm font-medium text-pink-500 hover:text-pink-600 dark:text-pink-400"
           >
-            See full experience &rarr;
+            {t('experience.seeMore')} &rarr;
           </Link>
         </div>
       </div>

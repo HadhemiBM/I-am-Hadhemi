@@ -3,28 +3,23 @@ import Image from '@/components/Image'
 import Link from '@/components/Link'
 import Experience from '@/components/Experience'
 import experienceData from '@/data/experienceData'
+import { useTranslation } from '@/context/LanguageContext'
 
 const RoughNotation = dynamic(
   () => import('react-rough-notation').then((m) => m.RoughNotation),
   { ssr: false }
 )
 
-export default function AuthorLayout({ children, frontMatter }) {
-  const {
-    name,
-    avatar,
-    occupation,
-    company,
-
-    text1,
-  } = frontMatter
+export default function AuthorLayout({ frontMatter }) {
+  const { t } = useTranslation()
+  const { name, avatar, occupation, company, text1 } = frontMatter
 
   return (
     <>
       <div className="">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5 md:pl-16">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            About
+            {t('about.title')}
           </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
@@ -55,7 +50,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I work at{' '}
+                {text1} {t('about.currentWork')}{' '}
                 <Link
                   href={'https://www.clozinn.com'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
@@ -66,9 +61,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             </p>
 
             <p>
-              I’m a strong advocate for open source and always open to collaborating on new and
-              exciting projects. Feel free to reach out if you have anything to talk about, you can
-              reach me through{' '}
+              {t("about.collaboratePart1")}{" "}
               <Link
                 href={'mailto:ben.manssour.hadhemi@gmail.com'}
                 className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
@@ -88,7 +81,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                   </g>
                 </svg>
               </Link>{' '}
-              or{' '}
+              {t('about.or')}{' '}
               <Link
                 href={'https://api.whatsapp.com/send?phone=+21699054434&text=hi'}
                 className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
@@ -114,7 +107,7 @@ export default function AuthorLayout({ children, frontMatter }) {
         <div className="mt-10 md:pl-16">
           <div className="space-y-2 pb-8 pt-6 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Experience
+              {t('about.experienceTitle')}
             </h1>
           </div>
           <div className="max-w-none pb-8 pt-8 xl:col-span-2">

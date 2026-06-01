@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+  },
+  "hero": {
+    "greeting": "Hi, I am",
+    "description": "I am a passionate Full Stack Developer who creates innovative solutions. I enjoy building meaningful applications and learning cutting-edge technologies.",
+    "tagline": "This is my place for",
+    "taglinePhrase": "thoughts, reflections & everything",
+    "taglineEnd": "in between. Have a good read!",
+    "shortcut": "to contact",
+    "buttons": {
+      "projects": "What I built",
+      "about": "Read my story",
+      "hire": "Hire me!",
+      "resume": "Resume"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "seeMore": "See full experience"
+  },
+  "about": {
+    "title": "About",
+    "experienceTitle": "Experience",
+    "bio": "I am a Tunisian Full Stack Developer with a strong background in web and mobile development. I am passionate about building modern applications with clean design, efficient code, and meaningful user experiences.",
+    "currentWork": "Currently, I work at",
+    "collaboratePart1": "I'm a strong advocate for open source and always open to collaborating on new and exciting projects. Feel free to reach out if you have anything to talk about, you can reach me through",
+    "or": "or"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A list of projects I have been working on or built",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "design": "Design"
+    },
+    "liveSite": "Live Site",
+    "close": "Close"
+  }
+}

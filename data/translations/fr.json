@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "description": "Je suis un développeur Full Stack passionné qui crée des solutions innovantes. J'aime construire des applications utiles et apprendre les dernières technologies.",
+    "tagline": "C'est mon espace pour",
+    "taglinePhrase": "pensées, réflexions & tout le reste",
+    "taglineEnd": "entre les deux. Bonne lecture !",
+    "shortcut": "pour me contacter",
+    "buttons": {
+      "projects": "Mes réalisations",
+      "about": "Mon parcours",
+      "hire": "Recrute-moi !",
+      "resume": "CV"
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "seeMore": "Voir l'expérience complète"
+  },
+  "about": {
+    "title": "À propos",
+    "experienceTitle": "Expérience",
+    "bio": "Je suis une développeuse Full Stack tunisienne avec une solide expérience en développement web et mobile. Je suis passionnée par la création d'applications modernes avec un design épuré, un code efficace et des expériences utilisateur enrichissantes.",
+    "currentWork": "Actuellement, je travaille chez",
+    "collaboratePart1": "Je suis une fervente défenseuse de l'open source et toujours ouverte à collaborer sur des projets nouveaux et passionnants. N'hésitez pas à me contacter si vous souhaitez échanger, vous pouvez me joindre par",
+    "or": "ou"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une liste de projets sur lesquels j'ai travaillé ou que j'ai réalisés",
+    "filters": {
+      "all": "Tous",
+      "web": "Web",
+      "mobile": "Mobile",
+      "design": "Design"
+    },
+    "liveSite": "Voir le site",
+    "close": "Fermer"
+  }
+}

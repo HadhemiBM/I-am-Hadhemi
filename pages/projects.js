@@ -36,13 +36,7 @@
 // }
 import projectsData from '@/data/projectsData'
 import { useState } from 'react'
-
-const CATEGORIES = [
-  { label: 'All', value: 'all' },
-  { label: 'Web', value: 'web' },
-  { label: 'Mobile', value: 'mobile' },
-  { label: 'Design', value: 'design' },
-]
+import { useTranslation } from '@/context/LanguageContext'
 
 const CATEGORY_MAP = {
   'AccesSiv : LandingPage': 'web',
@@ -58,8 +52,16 @@ const CATEGORY_MAP = {
 }
 
 export default function Projects() {
+  const { t } = useTranslation()
   const [activeCategory, setActiveCategory] = useState('all')
   const [overlayProject, setOverlayProject] = useState(null)
+
+  const CATEGORIES = [
+    { label: t('projects.filters.all'), value: 'all' },
+    { label: t('projects.filters.web'), value: 'web' },
+    { label: t('projects.filters.mobile'), value: 'mobile' },
+    { label: t('projects.filters.design'), value: 'design' },
+  ]
 
   const filtered =
     activeCategory === 'all'
@@ -70,10 +72,10 @@ export default function Projects() {
     <div className="mx-auto max-w-6xl  py-4">
       <div className="mb-8">
         <h1 className="mb-2 text-4xl font-medium leading-tight tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
-          Projects
+          {t('projects.title')}
         </h1>
         <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-          A list of projects I have been working on or built
+          {t('projects.subtitle')}
         </p>
       </div>
 
@@ -129,7 +131,7 @@ export default function Projects() {
             </div>
             <div className="flex gap-4">
               {overlayProject.href && (
-                <a href={overlayProject.href} target="_blank" rel="noopener noreferrer" className="rounded-lg bg-primary-500 px-4 py-2 text-white hover:bg-primary-600">Live Site</a>
+                <a href={overlayProject.href} target="_blank" rel="noopener noreferrer" className="rounded-lg bg-primary-500 px-4 py-2 text-white hover:bg-primary-600">{t('projects.liveSite')}</a>
               )}
               {overlayProject.github && (
                 <a href={overlayProject.github} target="_blank" rel="noopener noreferrer" className="rounded-lg bg-gray-800 px-4 py-2 text-white hover:bg-gray-900">GitHub</a>
