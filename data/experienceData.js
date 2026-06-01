@@ -6,18 +6,19 @@ const experienceData = [
     range: 'November 2025 - Present',
     url: 'https://www.clozinn.com',
     text1:
-      'Led the end-to-end front-end development of the LegalTech mobile application “Actoob”, from UI/UX design and high-fidelity prototyping (Figma) to production-ready implementation using React Native (Expo), including integration of RESTful APIs, OCR services, and multilingual support to enhance accessibility for a diverse user base.',
+      'Designed and developed the AccesSIV Particulier Platform, a free web platform that streamlines French administrative procedures via guided document submission, rapid dossier verification (5–15 minutes), automated compliance validation, and intelligent routing to certified processing centers for procedure completion.',
     text2:
-      'Engineered and launched the Actoob marketing website using Next.js and Tailwind CSS, delivering a fully responsive, multilingual, high-performance, and SEO-optimized experience across all devices.',
+      'Led the end-to-end front-end development of the LegalTech mobile application “Actoob”, from UI/UX design and high-fidelity prototyping (Figma) to production-ready implementation using React Native (Expo), including integration of RESTful APIs, OCR services, and multilingual support to enhance accessibility for a diverse user base.',
     text3:
-      'Delivered the "AccesSIV" landing page for a France-based project using Next.js, ensuring pixel-perfect implementation from Figma designs, a fully responsive layout, and strong SEO foundations.',
-    text4: 'Deployed and managed applications using Vercel and OVH, optimizing load time, performance, and scalability.',
-    text5:
-      'Collaborated cross-functionally with design and marketing teams to align product vision, enhance SEO strategy, and improve user acquisition.',
+      'Engineered and launched the Actoob marketing website using Next.js and Tailwind CSS, delivering a fully responsive, multilingual, high-performance, and SEO-optimized experience across all devices.',
+    text4:
+      'Delivered the “AccesSIV” landing page for a France-based project using Next.js, ensuring pixel-perfect implementation from Figma designs, a fully responsive layout, and strong SEO foundations.',
+    text5: 'Deployed and managed applications using Vercel and OVH, optimizing load time, performance, and scalability.',
     text6:
-      'Took ownership of front-end architecture, code quality, and performance optimization across multiple projects.',
-   
+      'Collaborated cross-functionally with design and marketing teams to align product vision, enhance SEO strategy, and improve user acquisition.',
     text7:
+      'Took ownership of front-end architecture, code quality, and performance optimization across multiple projects.',
+    text8:
       'Tools: React Native (Expo), Next.js, Tailwind CSS, Figma, Vercel, OVH, REST APIs, OCR APIs, GitHub',
   },
   {
