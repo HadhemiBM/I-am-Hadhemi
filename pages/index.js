@@ -1,8 +1,13 @@
+import dynamic from 'next/dynamic'
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
 import experienceData from '@/data/experienceData'
-import { RoughNotation } from 'react-rough-notation'
 import useSound from 'use-sound'
+
+const RoughNotation = dynamic(
+  () => import('react-rough-notation').then((m) => m.RoughNotation),
+  { ssr: false }
+)
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -12,9 +17,9 @@ export default function Home() {
   return (
     <>
       <div>
-        <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
-          <div className="pt-6">
-            <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <div className="mb-4 flex flex-col items-center gap-x-12 xl:flex-row">
+          <div className="pt-2">
+            <h1 className="pb-2 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Hi, I am {''}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">
                 Hadhemi
@@ -73,7 +78,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
+            <div className="grid grid-cols-1 grid-rows-4 gap-8 py-12">
               <div
                 className="my-2 grid items-start gap-8"
                 onClick={() => {
@@ -145,17 +150,12 @@ export default function Home() {
               <div
                 className="my-2 grid items-start gap-8"
                 onClick={() => {
-                  ThemeSoundResume()
+                  ThemeSoundbuild()
                 }}
               >
                 <div className="group relative">
-                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-
-                  <Link
-                    href="/static/pdf/Hadhemi-Ben-Mansour.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                  <Link href="mailto:ben.manssour.hadhemi@gmail.com">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
@@ -165,21 +165,55 @@ export default function Home() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
-                          <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                          <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
-                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                           />
                         </svg>
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">
-                          Hire me!&nbsp;&nbsp;&nbsp;
-                        </span>
+                        <span className="pr-6 text-gray-900 dark:text-gray-100">Hire me!</span>
                       </span>
-                      <span className="pl-6 text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                        Resume&nbsp;&rarr;
+                      <span className="pl-6 text-fuchsia-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
+                        Mail&nbsp;&rarr;
+                      </span>
+                    </span>
+                  </Link>
+                </div>
+              </div>
+              <div
+                className="my-2 grid items-start gap-8"
+                onClick={() => {
+                  ThemeSoundResume()
+                }}
+              >
+                <div className="group relative">
+                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-violet-600 to-cyan-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                  <Link
+                    href="/static/pdf/Hadhemi-Ben-Mansour.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
+                      <span className="flex items-center space-x-5">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-6 w-6 -rotate-6 text-cyan-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                          />
+                        </svg>
+                        <span className="pr-6 text-gray-900 dark:text-gray-100">Resume</span>
+                      </span>
+                      <span className="pl-6 text-cyan-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
+                        PDF&nbsp;&rarr;
                       </span>
                     </span>
                   </Link>
@@ -191,7 +225,7 @@ export default function Home() {
       </div>
 
       {/* Horizontal Experience Timeline */}
-      <div className="mt-4  pt-10 dark:border-gray-700">
+      <div className="mt-4  pt-0 dark:border-gray-700">
         <h2 className="mb-10 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
           Experience
         </h2>

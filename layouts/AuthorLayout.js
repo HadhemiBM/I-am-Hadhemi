@@ -1,9 +1,13 @@
+import dynamic from 'next/dynamic'
 import Image from '@/components/Image'
-
 import Link from '@/components/Link'
 import Experience from '@/components/Experience'
 import experienceData from '@/data/experienceData'
-import { RoughNotation } from 'react-rough-notation'
+
+const RoughNotation = dynamic(
+  () => import('react-rough-notation').then((m) => m.RoughNotation),
+  { ssr: false }
+)
 
 export default function AuthorLayout({ children, frontMatter }) {
   const {
