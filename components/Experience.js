@@ -14,6 +14,7 @@ const Experience = ({
   text6,
   text7,
   text8,
+  text9,
 }) => {
   return (
     <div className="my-3">
@@ -71,6 +72,12 @@ const Experience = ({
             <div className="items-top flex flex-row">
               <div className="mr-2 text-lg text-primary-color-500"> &#8227;</div>
               <div className="text-gray-500 dark:text-gray-400">{text8}</div>
+            </div>
+          )}
+          {text9 && (
+            <div className="items-top flex flex-row">
+              <div className="mr-2 text-lg text-primary-color-500"> &#8227;</div>
+              <div className="text-gray-500 dark:text-gray-400">{text9}</div>
             </div>
           )}
         </div>

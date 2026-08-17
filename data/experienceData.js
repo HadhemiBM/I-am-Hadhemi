@@ -5,20 +5,28 @@ const experienceData = [
     location: 'Lac3, Tunisia / Hybrid',
     range: 'November 2025 - Present',
     url: 'https://www.clozinn.com',
-    text1:
-      'Designed and developed the AccesSIV Particulier Platform, a free web platform that streamlines French administrative procedures via guided document submission, rapid dossier verification (5–15 minutes), automated compliance validation, and intelligent routing to certified processing centers for procedure completion.',
+
+        text1:
+      'Led the development of AccessSIV V2, a complete redesign and evolution of the platform, introducing scalable features including Mistral AI integration, French vehicle registration API integration, and a vehicle procedure simulator.',
     text2:
-      'Led the end-to-end front-end development of the LegalTech mobile application “Actoob”, from UI/UX design and high-fidelity prototyping (Figma) to production-ready implementation using React Native (Expo), including integration of RESTful APIs, OCR services, and multilingual support to enhance accessibility for a diverse user base.',
+      'Developed the administration module with Role-Based Access Control (RBAC), supporting distinct Admin and Sub-Admin roles, permissions, and management workflows.',
+   
     text3:
-      'Engineered and launched the Actoob marketing website using Next.js and Tailwind CSS, delivering a fully responsive, multilingual, high-performance, and SEO-optimized experience across all devices.',
+      'Designed and developed the AccesSIV Particulier Platform, a free web platform that streamlines French administrative procedures via guided document submission, rapid dossier verification (5–15 minutes), automated compliance validation, and intelligent routing to certified processing centers for procedure completion.',
     text4:
-      'Delivered the “AccesSIV” landing page for a France-based project using Next.js, ensuring pixel-perfect implementation from Figma designs, a fully responsive layout, and strong SEO foundations.',
-    text5: 'Deployed and managed applications using Vercel and OVH, optimizing load time, performance, and scalability.',
+      'Led the end-to-end front-end development of the LegalTech mobile application “Actoob”, from UI/UX design and high-fidelity prototyping (Figma) to production-ready implementation using React Native (Expo), including integration of RESTful APIs, OCR services, and multilingual support to enhance accessibility for a diverse user base.',
+    text5:
+      'Implemented push notifications in the Actoob mobile application to improve user engagement and provide real-time updates on document status, messages, and system alerts using Expo Notifications / Firebase Cloud Messaging.',
     text6:
-      'Collaborated cross-functionally with design and marketing teams to align product vision, enhance SEO strategy, and improve user acquisition.',
+      'Engineered and launched the Actoob marketing website using Next.js and Tailwind CSS, delivering a fully responsive, multilingual, high-performance, and SEO-optimized experience across all devices.',
     text7:
+      'Delivered the “AccesSIV” landing page for a France-based project using Next.js, ensuring pixel-perfect implementation from Figma designs, a fully responsive layout, and strong SEO foundations.',
+    text8: 'Deployed and managed applications using Vercel and OVH, optimizing load time, performance, and scalability.',
+    text9:
+      'Collaborated cross-functionally with design and marketing teams to align product vision, enhance SEO strategy, and improve user acquisition.',
+    text10:
       'Took ownership of front-end architecture, code quality, and performance optimization across multiple projects.',
-    text8:
+    text11:
       'Tools: React Native (Expo), Next.js, Tailwind CSS, Figma, Vercel, OVH, REST APIs, OCR APIs, GitHub',
   },
   {
