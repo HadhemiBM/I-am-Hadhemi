@@ -2,6 +2,7 @@ const experienceData = [
    {
     title: 'Front-End Engineer (Mobile & Web)',
     company: 'CLOZINN Support',
+    companyNote: 'Part of Novae Mobility (France)',
     location: 'Lac3, Tunisia / Hybrid',
     range: 'November 2025 - Present',
     url: 'https://www.clozinn.com',

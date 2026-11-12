@@ -260,6 +260,11 @@ export default function Home() {
                 >
                   {exp.company}
                 </Link>
+                {exp.companyNote && (
+                  <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+                    {exp.companyNote}
+                  </p>
+                )}
               </div>
             ))}
           </div>
